@@ -1,0 +1,29 @@
+package File_Handling;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+class BufferedReaderDemo {
+
+    public static void main(String[] args) {
+
+        try {
+
+            BufferedReader br =
+                    new BufferedReader(new FileReader("sample.txt"));
+
+            String line;
+
+            while ((line = br.readLine()) != null) {
+
+                System.out.println(line);
+            }
+
+            br.close();
+
+        } catch (Exception e) {
+
+            System.out.println(e);
+        }
+    }
+}
